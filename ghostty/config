@@ -1,0 +1,4 @@
+theme = "Catppuccin Macchiato"
+desktop-notifications = true
+font-family = Hack Nerd Font
+

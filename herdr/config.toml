@@ -1,0 +1,44 @@
+# herdr configuration
+# Optimized for seamless workspace / tab / agent switching in Ghostty.
+# Leader (prefix) = Ctrl+S. Frequent switching uses direct Cmd chords (no prefix).
+
+[theme]
+name = "catppuccin"
+# Follow Ghostty's light/dark appearance automatically.
+
+[keys]
+# Leader / prefix key. Ctrl+S passes through Ghostty to herdr as a control char.
+prefix = "ctrl+s"
+
+# ------------------------------------------------------------------
+# Direct switching layer (no prefix needed) — the "seamless" hotkeys.
+# ------------------------------------------------------------------
+# Tab cycle
+previous_tab = "cmd+p"
+next_tab     = "cmd+n"
+
+# Workspace cycle
+previous_workspace = "cmd+shift+p"
+next_workspace     = "cmd+shift+n"
+
+# Agent (attention queue) cycle — vim-style up/down
+previous_agent = "cmd+k"
+next_agent     = "cmd+j"
+
+# Everything below keeps herdr's defaults, now reached via the Cmd+S leader:
+#   Cmd+S then...  c=new tab, v=split │, -=split ─, x=close pane,
+#   z=zoom, w=workspace picker, g=goto, b=toggle sidebar,
+#   h/j/k/l=focus pane, r=resize mode, q=detach, ?=help
+
+# ------------------------------------------------------------------
+# Indexed direct jumps — press the number to jump straight there.
+# ------------------------------------------------------------------
+[keys.indexed]
+tabs       = "cmd"        # Cmd+1..9        -> jump to tab N
+workspaces = "cmd+shift"  # Cmd+Shift+1..9  -> jump to workspace N
+agents     = "cmd+ctrl"   # Cmd+Ctrl+1..9   -> focus agent N
+
+[ui]
+# Copy text to the clipboard as soon as it's selected with the mouse.
+copy_on_select = true
+accent = "#c6a0f6"  # Catppuccin Macchiato mauve

@@ -2,3 +2,42 @@ theme = "Catppuccin Macchiato"
 desktop-notifications = true
 font-family = Hack Nerd Font
 
+# Copy to the system clipboard the moment text is highlighted.
+copy-on-select = clipboard
+
+# ---------------------------------------------------------------------------
+# Pass Cmd chords through to herdr instead of letting Ghostty consume them.
+# `unbind` frees the trigger so it is sent to the running app (herdr).
+# NOTE: Ghostty does not allow trailing "#" comments on a keybind line.
+# ---------------------------------------------------------------------------
+
+# Cmd+1..9 -> herdr tab jump (Ghostty defaults: goto_tab / last_tab)
+keybind = super+1=unbind
+keybind = super+2=unbind
+keybind = super+3=unbind
+keybind = super+4=unbind
+keybind = super+5=unbind
+keybind = super+6=unbind
+keybind = super+7=unbind
+keybind = super+8=unbind
+keybind = super+9=unbind
+keybind = super+digit_1=unbind
+keybind = super+digit_2=unbind
+keybind = super+digit_3=unbind
+keybind = super+digit_4=unbind
+keybind = super+digit_5=unbind
+keybind = super+digit_6=unbind
+keybind = super+digit_7=unbind
+keybind = super+digit_8=unbind
+
+# Cycle keys claimed by herdr:
+# super+n = next tab (was new_window)
+# super+shift+n = next workspace
+# super+shift+p = previous workspace (was command palette)
+# super+j = next agent (was scroll_to_selection)
+# super+k = previous agent (was clear_screen)
+keybind = super+n=unbind
+keybind = super+shift+n=unbind
+keybind = super+shift+p=unbind
+keybind = super+j=unbind
+keybind = super+k=unbind
